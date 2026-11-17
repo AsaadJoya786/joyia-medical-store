@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Conso</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        header,
+        .header-top,
+        .header-bottom {
+            border: 2px solid;
+        }
+
+        .header-top,
+        .header-bottom {
+            height: 70px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .contact-section {
+            display: flex;
+            gap: 20px;
+            font-size: medium;
+
+        }
+
+        .email-box {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+
+        }
+
+        .call-box {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .cta-btn-section>a {
+            text-decoration: none;
+            background-color: rgb(16, 219, 219);
+            padding: 8px 10px;
+            border-radius: 20px;
+            color: black;
+        }
+
+        .header-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: rgb(96, 193, 238);
+        }
+
+        .search input {
+            margin-left: 5px;
+            padding: 10px;
+            border-radius: 10px;
+            background: transparent;
+            color: azure;
+            border: 2px solid white;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .menu-section a {
+            text-decoration: none;
+            color: antiquewhite;
+        }
+
+        .back-pic {
+            background-image: url('website.4.jpg');
+            height: 500px;
+            margin: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .back-pic h1 {
+            color: rgb(214, 243, 84);
+            font-size: 70px;
+            margin-left: 100px;
+            width: 664px;
+            margin-bottom: 20px;
+        }
+
+        .back-pic h3 {
+            color: rgb(214, 243, 84);
+            margin-left: 100px;
+            font-size: 30px;
+        }
+
+        .focus {
+            color: rgb(245, 72, 72);
+        }
+
+        .ancr:hover {
+            background-color: rgb(19, 19, 252);
+            border: 2px rgb(19, 19, 252);
+        }
+
+        .ancr {
+            background-color: aqua;
+            border-radius: 10px;
+            color: black;
+            font-size: x-large;
+            padding: 8px 15px;
+            margin-left: 100px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Main Content Layout */
+        .sect-man {
+            display: flex;
+            gap: 30px;
+            margin: 50px 100px;
+        }
+
+        .left-sect2 {
+            flex: 1.5;
+            border: 2px #ccc solid;
+            padding: 20px;
+
+        }
+
+        .right-sect2 {
+            flex: 1;
+            border: 2px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin-left: 100px;
+        }
+
+        .right-sect2 img {
+
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .right-sect2 button {
+            background-color: rgb(55, 169, 214);
+            border: 2px black solid;
+            border-radius: 20px;
+            padding: 8px 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .top-box {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .first-box {
+            background-color: rgb(154, 247, 234);
+            padding: 15px;
+            flex: 1;
+            text-align: center;
+            transition: all 0.3s;
+
+
+        }
+
+        .first-box img {
+            height: 50px;
+            width: 50px;
+        }
+
+
+        .second-box {
+            background-color: rgb(154, 247, 234);
+            padding: 15px;
+            flex: 1;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+
+        .second-box img {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 10px;
+
+        }
+
+        .bottom-box {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px
+        }
+
+        .first-box:hover {
+            background-color: rgb(65, 106, 182);
+
+
+        }
+
+        .second-box:hover {
+            background-color: rgb(65, 106, 182);
+
+
+        }
+
+        .sect3 {
+
+            background-image: url(website\ 2.jpg);
+            display: block;
+            height: 200px;
+            margin: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background: rgba(0, 60, 255, 0.6 ); */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            z-index: 0;
+        }
+
+        .sect3 h2 {
+            display: flex;
+            background: rgba(0, 150, 255, 0.25);
+            padding: 86px;
+            padding-left: 500px;
+            text-align: center;
+            color: rgba(5, 8, 190, 1);
+            font-size: xx-large;
+        }
+
+
+
+        .bar {
+            background-color: rgba(245, 243, 243,1);
+            opacity: 1;
+            color: black;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            padding-left: 280px;
+            padding-right: 215px;
+            margin-top: -80px;
+            border: 2px black solid;
+
+
+
+
+        }
+
+        .digit {
+            display: flex;
+            gap: 62px;
+
+        }
+
+        .alphabet {
+            display: flex;
+            gap: 10px;
+        }
+
+        .box {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            display: flex;
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+
+
+        }
+
+        .bottom {
+            display: flex;
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: center;
+
+        }
+
+        .box1 {
+            border: 1px rgb(165, 186, 192) solid;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: all 0.4s;
+
+        }
+
+        .box2 {
+            border: 1px rgb(84, 128, 141) solid;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: all 0.4s;
+        }
+
+        .box3 {
+            border: 1px rgb(84, 128, 141) solid;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: all 0.4s;
+        }
+
+        .box4 {
+            border: 1px rgb(84, 128, 141) solid;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: all 0.4s;
+        }
+
+        .box5 {
+            border: 1px rgb(84, 128, 141) solid;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: all 0.4s;
+        }
+
+        .box6 {
+            border: 1px rgb(84, 128, 141) solid;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: all 0.4s;
+        }
+
+        .box1:hover {
+            background-color: rgb(67, 67, 226);
+        }
+
+        .box2:hover {
+            background-color: rgb(67, 67, 226);
+        }
+
+        .box3:hover {
+            background-color: rgb(67, 67, 226);
+        }
+
+        .box4:hover {
+            background-color: rgb(67, 67, 226);
+        }
+
+        .box5:hover {
+            background-color: rgb(67, 67, 226);
+        }
+
+        .box6:hover {
+            background-color: rgb(67, 67, 226);
+        }
+
+        .sect4-head {
+
+            margin: 100px;
+            font-size: 20px;
+            text-align: center;
+            padding-right: 150px;
+            padding-left: 150px;
+            padding: 20px;
+            margin-left: 150px;
+            margin-right: 150px;
+
+
+        }
+
+        .sect4-head h1 {
+            color: #233e62;
+        }
+
+        .icon {
+            color: rgb(45, 136, 240);
+            align-self: center;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .sect5 {
+            background-image: url(website\ 2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 150px;
+            display: flex;
+           
+        }
+
+        .sect5-h {
+
+            color: rgb(229, 233, 34);
+            margin-top: 65px;
+
+            margin-left: 80px;
+            font-size: 17px;
+        }
+
+        .sect5 span {
+            color: rgb(238, 89, 62);
+        }
+
+        .sect5-btn a {
+
+            text-decoration: none;
+            padding: 15px;
+            padding-left: 23px;
+            padding-right: 23px;
+
+
+        }
+
+        .sect5-btn button {
+            margin-top: 70px;
+            margin-left: 350px;
+            border-radius: 50px;
+            background-color: white;
+            color: black;
+            padding: 15px;
+            padding-left: 25px;
+
+        }
+        .back{
+            display: flex;
+             background: rgba(51, 51, 230, 0.6);
+             width: 100%;       
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <div class="logo-section">
+                <h2>Consolution</h2>
+            </div>
+
+            <div class="contact-section">
+                <div class="email-box">
+                    <div class="icon" style="font-size: 40px;">✉</div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>test@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="call-box">
+                    <div class="icon" style="font-size: 40px;">📞</div>
+                    <div class="text">
+                        <h3>Call</h3>
+                        <p>+203920392</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-btn-section">
+                <a href="#">Book a consultation</a>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="menu-section">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="website 1.jpg">Home</a></li>
+                        <li><a href="website 2.jpg">Project</a></li>
+                        <li><a href="website 3.jpg">Call</a></li>
+                        <li><a href="website.4.jpg">Email</a></li>
+                        <li><a href="hacker 2.jpg">Setting</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="search">
+                <label class="search-label">Search</label>
+                <input type="search" placeholder="Search">
+            </div>
+        </div>
+    </header>
+
+    <section class="back-pic">
+        <div>
+            <h3>we are <span class="focus">developer</span> and we are developing</h3>
+            <h1>WELCOME TO OUR <span class="focus">WEBSITE</span></h1>
+        </div>
+        <div>
+            <a href="hacker 2.jpg" class="ancr">Our Users</a>
+        </div>
+    </section>
+
+    <section class="sect-man">
+        <div class="left-sect2">
+            <div class="top-left">
+                <h1>OUR CLASSIFICATION</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quidem eius, quam fuga provident qui?
+                </p>
+                <br>
+                <p>Obcaecati dignissimos non officiis qui tenetur.</p>
+            </div>
+
+            <div class="bottom-left">
+                <div class="top-box">
+                    <div class="first-box">
+                        <img src="website 3.jpg" alt="Icon">
+                        <h3>ORGANISATION</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="second-box">
+                        <img src="website 2.jpg" alt="Icon">
+                        <h3>MARKETING</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-left">
+                <div class="bottom-box">
+                    <div class="first-box">
+                        <img src="website.4.jpg" alt="Icon">
+                        <h3>CONTACT US</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="second-box">
+                        <img src="website 1.jpg" alt="Icon">
+                        <h3>Setting</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="right-sect2">
+            <img src="website 2.jpg" alt="Progress">
+            <h4>READ OUR PROGRESS</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis nihil aut, dolores illum.</p>
+            <br>
+            <p>Consectetur quis eos aliquid esse minus ipsum omnis voluptates.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad incidunt, quibusdam quod doloremque quasi
+                aliquid dignissimos molestiae unde soluta dolor vero, explicabo iure cum fugiat modi necessitatibus
+                adipisci rerum provident?</p>
+            <button>CONTACT US</button>
+        </div>
+    </section>
+    <section class="sect3">
+        <div class="sect3-div">
+            <h2>WE ARE DEVELOPER</h2>
+        </div>
+
+    </section>
+    <div class="bar">
+        <div class="digit">
+            <h2>
+                540
+            </h2>
+            <h2>893</h2>
+            <h2>384</h2>
+            <h2>493</h2>
+        </div>
+        <div class="alphabet">
+            <h3>Marketing</h3>
+            <h3>Stacking</h3>
+            <h3>Customers</h3>
+            <h3>Proffession</h3>
+        </div>
+    </div>
+    <section class="sect4-head">
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam perspiciatis tempora asperiores error
+            alias autem consequatur, aspernatur repellendus, ad architecto laudantium odit quisquam itaque, libero
+            debitis suscipit eaque voluptatem voluptatum.</p>
+    </section>
+    <section class="sect4">
+        <div class="box">
+            <div class="top">
+                <div class="box1">
+                    <i class="fa-solid fa-house icon"></i>
+                    <h2>Bussiness Conslting</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, aliquam iure.</p>
+                </div>
+                <div class="box2">
+                    <i class="fa-solid fa-cloud icon"></i>
+                    <h2>Bussiness Analysis</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, aliquam iure.</p>
+                </div>
+                <div class="box3">
+                    <i class="fa-solid fa-cart-shopping icon"></i>
+                    <h2>Bussiness Insurance</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, aliquam iure.</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="box4">
+                    <i class="fa-solid fa-calendar-days icon"></i>
+                    <h2>Global Investigation</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, aliquam iure.</p>
+                </div>
+                <div class="box5">
+                    <i class="fa-solid fa-bookmark icon"></i>
+                    <h2>Audit and Evaluation</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, aliquam iure.</p>
+                </div>
+                <div class="box6">
+                    <i class="fa-solid fa-book icon"></i>
+                    <h2>Marketing Strategy</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, aliquam iure.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="sect5">
+        <div class="back">
+            <div class="sect5-h">
+                <h1>
+                    YOU ALWAYS GET THE BEST <span>GUIDANCE</span>
+                </h1>
+            </div>
+            <div class="sect5-btn">
+                <button>
+                    <a href="C:\Users\jpc\Desktop\1 html\2.html">Request Quote</a>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>
